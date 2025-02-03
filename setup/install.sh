@@ -74,6 +74,12 @@ assert \
     "Successfully installed all required packages via AUR" \
     "Failed to install all required packages via AUR"
 
+# Install uni packages (use yay, since it encompasses more)
+sudo -u $LOGNAME yay -S $(cat $SETUP/uni.pkglist | xargs) --needed --noconfirm
+assert \
+    "Successfully installed all university packages via AUR" \
+    "Failed to install all university packages via AUR"
+
 # Enable services
 systemctl enable --now $(cat $SETUP/services)
 

@@ -1,0 +1,35 @@
+{
+    "layer": "top",
+    "position": "top",
+    
+    "height": 32,
+    "margin": "4 24",
+    "spacing": 8,
+
+    "start_hidden": false,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "mpris"
+    ],
+
+    "modules-center": [
+        "pulseaudio",
+        "clock",
+        "backlight"
+    ],
+
+    "modules-right": [
+        "bluetooth",
+        "network",
+        "disk",
+        "memory",
+        "cpu",
+        "battery"
+    ],
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}"
+    }
+}

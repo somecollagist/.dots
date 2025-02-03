@@ -1,6 +1,13 @@
 user-dirs.dirs
 user-dirs.locale
 
-dconf/
-pulse/
-yay/
+*/
+
+!Code/
+!dconf/
+!foot/
+!gh/
+!hypr
+!pulse/
+!waybar
+!yay/
