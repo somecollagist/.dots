@@ -31,6 +31,7 @@ cd $REPO
 
 # Relink config
 rm -rf $CONFIG
+rm -rf $ASSETS
 ln -s $DOTS $CONFIG
 ln -s $ASSETS $CONFASSETS
 assert \
