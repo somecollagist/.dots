@@ -1,9 +1,11 @@
 base-devel
+brightnessctl
 firefox
 foot
 fprintd
 gdm
 git
+gnome-control-center
 gnome-keyring
 godot
 hyprland
@@ -14,3 +16,9 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 usbutils
+webkit2gtk
+wofi
+
+
+
+

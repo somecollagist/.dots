@@ -2,5 +2,7 @@
     "editor.bracketPairColorization.enabled": false,
     "explorer.compactFolders": false,
     "haskell.manageHLS": "PATH",
-    "workbench.colorTheme": "Tokyo City Darker"
+    "workbench.colorTheme": "Tokyo City Darker",
+    "editor.codeLens": false,
+    "editor.inlayHints.enabled": "off"
 }
