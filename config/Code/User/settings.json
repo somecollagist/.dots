@@ -4,5 +4,6 @@
     "haskell.manageHLS": "PATH",
     "workbench.colorTheme": "Tokyo City Darker",
     "editor.codeLens": false,
-    "editor.inlayHints.enabled": "off"
+    "editor.inlayHints.enabled": "off",
+    "files.simpleDialog.enable": true
 }
