@@ -1,0 +1,13 @@
+@use "../colours.scss";
+
+.network {
+  &.connected.node {
+    background: colours.$bg-colour;
+  }
+
+  &.disconnected.node {
+    background: colours.$error;
+    color: colours.$bg-colour;
+    border: none;
+  }
+}

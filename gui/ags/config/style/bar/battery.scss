@@ -1,0 +1,118 @@
+@use "../colours.scss";
+
+.battery {
+  &.charging.stable {
+    color: colours.$bg-colour;
+    border: none;
+    animation: charge-stable 5s linear 0s infinite normal;
+    text-shadow: -1px 0 colours.$success, 1px 0 colours.$success, 0 -1px colours.$success, 0 1px colours.$success;
+  }
+
+  &.charging.low {
+    color: colours.$bg-colour;
+    border: none;
+    animation: charge-low 4s linear 0s infinite normal;
+    text-shadow: -1px 0 colours.$warning, 1px 0 colours.$warning, 0 -1px colours.$warning, 0 1px colours.$warning;
+  }
+
+  &.charging.critical {
+    color: colours.$bg-colour;
+    border: none;
+    animation: charge-critical 3s linear 0s infinite normal;
+    text-shadow: -1px 0 colours.$error, 1px 0 colours.$error, 0 -1px colours.$error, 0 1px colours.$error;
+  }
+
+  &.discharging.stable {
+    color: colours.$fg-colour;
+  }
+
+  &.discharging.low {
+    color: colours.$bg-colour;
+    border: none;
+    animation: discharge-low 4s linear 0s infinite alternate;
+    text-shadow: -1px 0 colours.$warning, 1px 0 colours.$warning, 0 -1px colours.$warning, 0 1px colours.$warning;
+  }
+
+  &.discharging.critical {
+    color: colours.$bg-colour;
+    border: none;
+    text-shadow: -1px 0 colours.$error, 1px 0 colours.$error, 0 -1px colours.$error, 0 1px colours.$error;
+  }
+
+  &.full {
+    color: colours.$bg-colour;
+    background-color: colours.$success;
+  }
+
+  >* {
+    margin-right: 12px;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+@keyframes charge-stable {
+  0% {
+    background: linear-gradient(to right, colours.$success 0%, colours.$bg-colour 100%);
+  }
+
+  50% {
+    background: linear-gradient(to right, colours.$success 0%, colours.$success 100%);
+  }
+
+  90% {
+    background: linear-gradient(to right, colours.$bg-colour 0%, colours.$bg-colour 100%);
+  }
+
+  100% {
+    background: linear-gradient(to right, colours.$success 0%, colours.$bg-colour 100%);
+  }
+}
+
+@keyframes charge-low {
+  0% {
+    background: linear-gradient(to right, colours.$warning 0%, colours.$bg-colour 100%);
+  }
+
+  50% {
+    background: linear-gradient(to right, colours.$warning 0%, colours.$warning 100%);
+  }
+
+  90% {
+    background: linear-gradient(to right, colours.$bg-colour 0%, colours.$bg-colour 100%);
+  }
+
+  100% {
+    background: linear-gradient(to right, colours.$warning 0%, colours.$bg-colour 100%);
+  }
+}
+
+@keyframes charge-critical {
+  0% {
+    background: linear-gradient(to right, colours.$error 0%, colours.$bg-colour 100%);
+  }
+
+  50% {
+    background: linear-gradient(to right, colours.$error 0%, colours.$error 100%);
+  }
+
+  90% {
+    background: linear-gradient(to right, colours.$bg-colour 0%, colours.$bg-colour 100%);
+  }
+
+  100% {
+    background: linear-gradient(to right, colours.$error 0%, colours.$bg-colour 100%);
+  }
+}
+
+@keyframes discharge-low {
+  0% {
+    background-color: colours.$bg-colour;
+  }
+
+  100% {
+    background-color: colours.$warning;
+  }
+}

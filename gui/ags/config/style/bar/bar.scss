@@ -1,0 +1,37 @@
+@use "../colours.scss";
+
+@use "battery.scss";
+@use "clock.scss";
+@use "network.scss";
+@use "workspaces.scss";
+
+window.Bar {
+  background: transparent;
+  color: colours.$fg-colour;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Droid Sans Mono', 'monospace', monospace, 'DroidSansM Nerd Font';
+  margin: 4px 4px 0px;
+
+  >centerbox>box {
+    > * {
+      margin-right: 4px;
+    }
+    :last-child {
+      margin-right: 0;
+    }
+  }
+
+  .node {
+    background: colours.$bg-colour;
+    border: 2px solid colours.$accent;
+    border-radius: 8px;
+    padding: 4px 8px;
+    > * {
+      margin-right: 8px;
+    }
+    :last-child {
+      margin-right: 0;
+    }
+  }
+}

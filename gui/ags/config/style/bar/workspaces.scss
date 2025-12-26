@@ -1,0 +1,17 @@
+@use "../colours.scss";
+
+.workspaces {
+  font-weight: bold;
+  label {
+    &.active {
+      color: colours.$accent;
+    }
+    &.open {
+      color: colours.$fg-colour;
+    }
+    &.closed {
+      color: colours.$fg-colour;
+      filter: brightness(50%)
+    }
+  }
+}

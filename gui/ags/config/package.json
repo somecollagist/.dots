@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "ags": "*",
+    "astal": "/nix/store/*-astal-gjs/share/astal/gjs",
+    "gnim": "*"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2
+  }
+}

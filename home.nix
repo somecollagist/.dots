@@ -1,14 +1,48 @@
-{ lib, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
-    home = {
-        packages = with pkgs; [
-            hello
-        ];
+  imports = [
+    inputs.ags.homeManagerModules.default
+    ./apps/apps.nix
+    ./gui/gui.nix
+    ./services.nix
+  ];
 
-        username = "somecollagist";
-        homeDirectory = "/home/somecollagist";
+  home = {
+    packages = with pkgs; [
+      catppuccin
+      catppuccin-discord
+      catppuccin-gtk
 
-        stateVersion = "25.05";
-    };
+      hyprlock
+      hypridle
+      hyprpaper
+      hyprsunset
+      hyprpicker
+      hyprpolkitagent
+
+      playerctl
+      sway-contrib.grimshot
+      wf-recorder
+
+      bc
+      docker
+      git
+      jq
+      socat
+
+      cava
+      discord
+      foot
+      krita
+      lunar-client
+      spotify
+      vscode
+    ];
+
+    username = "somecollagist";
+    homeDirectory = "/home/somecollagist";
+
+    stateVersion = "25.05";
+  };
 }
